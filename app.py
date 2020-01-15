@@ -11,6 +11,7 @@ app.config.from_envvar('ENV_FILE_LOCATION')
 mail = Mail(app)
 
 # imports requiring app and mail
+# nopep8: Avoids that line can be formatted
 from resources.routes import initialize_routes  # nopep8
 api = Api(app, errors=errors)
 bcrypt = Bcrypt(app)

@@ -38,6 +38,10 @@ class BadTokenError(Exception):
     pass
 
 
+class ExpiredTokenError(Exception):
+    pass
+
+
 errors = {
     "InternalServerError": {
         "message": "Something went wrong",
@@ -77,6 +81,10 @@ errors = {
     },
     "BadTokenError": {
         "message": "Invalid token",
+        "status": 403
+    },
+    "ExpiredTokenError": {
+        "message": "Expired token",
         "status": 403
     }
 }
